@@ -1,0 +1,14 @@
+const worlds=[
+["THE ABYSS","A bottomless architectural void. Light, geometry and reflection turn a few centimetres into impossible depth.","01"],
+["THE SHAFT","Industrial brick, ladders and warm utility light repeated into a seemingly endless descent.","02"],
+["THE MATRIX","A precise field of light and structure, designed for contemporary interiors.","03"]];
+const kids=["SPACE MISSION","DINO WORLD","RACING CITY"];
+export default function Home(){return <main>
+<section className="hero"><nav><b>INFINITY WORLDS</b><div><a href="#collection">COLLECTION</a><a href="#art">ART</a><a href="#kids">KIDS</a><a href="#contact">INQUIRE</a></div></nav><div className="heroCopy"><p>SCULPTURAL FURNITURE · OPTICAL WORLDS</p><h1>Make room<br/><i>for impossible.</i></h1><p className="lead">Furniture that does more than occupy a room. Hand-built worlds that appear to continue far beyond their physical depth.</p><a className="cta" href="#collection">EXPLORE THE COLLECTION →</a></div></section>
+<section className="intro"><span>01 / THE IDEA</span><h2>We build centimetres.<br/>You experience <i>metres.</i></h2><p>Mirror, light and physical miniature scenery combine inside a refined piece of furniture to create an illusion of extraordinary depth.</p></section>
+<section id="collection" className="collection"><header><span>02 / SIGNATURE COLLECTION</span><h2>Three objects.<br/>Three worlds.</h2></header><div className="cards">{worlds.map(([n,d,i])=><article key={n}><div className={"visual v"+i}><span>{i}</span><strong>{n}</strong></div><h3>{n}</h3><p>{d}</p><button>DISCOVER THE WORLD</button></article>)}</div></section>
+<section id="art" className="exodus"><div className="exodusCopy"><span>ART COLLECTION · COMING SOON</span><h2>THE<br/><i>EXODUS</i></h2><p>A cinematic interpretation of the crossing of the sea, constructed as a physical miniature world and extended through infinity optics.</p><p className="edition">A numbered, limited art piece. Individually built.</p></div><div className="sea"><div className="path"></div><div className="glow"></div></div></section>
+<section id="kids" className="kids"><span>INFINITY KIDS · COMING SOON</span><h2>Small worlds.<br/><i>Endless imagination.</i></h2><div className="kidgrid">{kids.map((x,i)=><div className={"kid k"+i} key={x}><small>WORLD 0{i+1}</small><h3>{x}</h3><p>Original immersive scenery designed for bedrooms and creative spaces.</p></div>)}</div></section>
+<section className="craft"><span>BUILT, NOT PRINTED</span><h2>Real materials.<br/>Real miniature worlds.<br/><i>An unreal sense of depth.</i></h2><div><p>Metalwork</p><p>Optical glass</p><p>Hand-built scenery</p><p>Integrated light</p></div></section>
+<footer id="contact"><b>INFINITY WORLDS</b><h2>Own a world<br/>without an end.</h2><a href="mailto:hello@infinityworlds.co">INQUIRE ABOUT A PIECE →</a><small>INFINITY WORLDS · CONCEPT COLLECTION 2026</small></footer>
+</main>}
