@@ -1,18 +1,52 @@
-const models=[
-{n:"Infinity Side",sub:"שולחן צד / קפה קטן",size:"Ø50–60 ס״מ · גובה 40–45 ס״מ",price:"החל מ־₪1,790",img:"https://i.etsystatic.com/28257059/r/il/6d9eb2/3347159888/il_794xN.3347159888_qe9i.jpg"},
-{n:"Infinity Living",sub:"שולחן סלון מרשים",size:"100×60 ס״מ · גובה 35–40 ס״מ",price:"החל מ־₪3,490",img:"https://assets.wfcdn.com/im/23418253/resize-h800-w800%5Ecompr-r85/4185/418525122/Led%2BInfinity%2BMirror%2BCoffee%2BTable%2BFor%2BLiving%2BRoom-1261765014.jpg"},
-{n:"Infinity Dining",sub:"שולחן אוכל יוקרתי",size:"180–220×90–100 ס״מ · גובה 75 ס״מ",price:"החל מ־₪7,900",img:"https://i.etsystatic.com/44061559/r/il/f3f8fe/7745576328/il_794xN.7745576328_mno1.jpg"}
-];
-const worlds=[["The Forest","יער אינסופי"],["The Ocean","מים אינסופיים"],["The Galaxy","חלל אינסופי"],["The Ladder","סולם אינסופי"],["The Tunnel","מנהרת אור"],["The Matrix","עולם דיגיטלי"],["The Abyss","עומק קלאסי"],["The Zen","טבע ורוגע"]];
-const kids=[["Dino World","ג׳ונגל, שכבות צמחייה ודינוזאורים שנמשכים אל העומק."],["Space Mission","חללית, כוכבים וכוכבי לכת בתוך חלל אינסופי."],["Hero City","גיבור מקורי מעל עיר תלת־ממדית עמוקה ומוארת."],["Racing World","מסלול מואר ומכוניות שנעלמים אל תוך האינסוף."]];
 export default function Home(){return <main dir="rtl">
-<nav><div className="brand"><b>∞</b><span>Infinity Tables<small>MORE THAN A TABLE</small></span></div><div className="links"><a href="#models">דגמים</a><a href="#worlds">עולמות עיצוב</a><a href="#coming">בקרוב</a><a href="#how">איך זה עובד</a></div><a className="navcta" href="#reserve">הזמנה מוקדמת</a></nav>
-<header className="hero"><div className="heroImage"></div><div className="veil"></div><div className="heroText"><h1>לא עוד שולחן.<br/><em>עולם אחר בבית שלך.</em></h1><p>רהיטים שמשלבים עיצוב, טכנולוגיה ואמנות ליצירת חוויה ויזואלית מרהיבה. כל שולחן הוא חלון לעולם אחר.</p><div className="buttons"><a className="gold" href="#models">גלה את הדגמים</a><a className="outline" href="#worlds">גלו את העולמות</a></div><div className="features"><span>◇<b>עיצוב פרימיום</b><small>מותאם אישית</small></span><span>✦<b>תאורת LED</b><small>שליטה חכמה</small></span><span>⌁<b>אספקה</b><small>עד 90 יום</small></span><span>∞<b>Worlds</b><small>מודול עולם פנימי</small></span></div></div></header>
-<section id="models" className="shell modelsSection"><div className="models">{models.map(m=><article className="model" key={m.n}><div className="modelPhoto"><img src={m.img}/><div className="modelShade"></div><div className="modelName"><small>{m.sub}</small><h3>{m.n}</h3></div></div><div className="modelInfo"><span>{m.size}</span><b>{m.price}</b><a href="#reserve">עיצוב בהתאמה אישית ↗</a></div></article>)}</div></section>
-<section id="worlds" className="worldSection"><div className="shell"><div className="worldHead"><div><h2>עולמות עיצוב</h2><p>בחר את העולם שמתאים לך, לכל דגם</p></div><a href="#reserve">ראה את כל העולמות ←</a></div><div className="worldGrid">{worlds.map((w,i)=><article className={"world w"+i} key={w[0]}><div className="depth"><i></i><i></i><i></i><i></i></div><div><h3>{w[0]}</h3><span>{w[1]}</span></div></article>)}</div><div className="custom">+ YOUR WORLD <span>עיצוב אישי לפי סיפור, חלל או רעיון משלכם</span></div></div></section>
-<section className="manifest compact"><div className="shell"><div className="ey">THE IDEA</div><h2>אנחנו לא מוכרים<br/><em>אפקט של מראה.</em><br/>אנחנו בונים עולמות.</h2><p>כל World מתחיל כסצנה פיזית אמיתית: קירות, צמחייה, דמויות, מים, אור או אובייקטים מיניאטוריים. מערכת אופטית הופכת כמה סנטימטרים של בנייה לעומק שנראה כמו מטרים.</p></div></section>
-<section id="coming" className="shell coming"><div className="sectionTitle"><div><div className="ey">WHAT'S NEXT</div><h2>וזו רק ההתחלה.</h2></div><p>שתי קולקציות שנמצאות בפיתוח ומראות לאן Infinity Worlds יכול להגיע מעבר לקולקציית ההשקה.</p></div><div className="future"><article className="exodus"><img src="https://watermarkwaves.com/cdn/shop/articles/10_Facts_About_the_Parting_of_the_Red_Sea_in_the_Bible.png?v=1767139839&width=1536"/><div className="fshade"></div><div className="fcopy"><span>ART COLLECTION · COMING SOON</span><h3>THE EXODUS</h3><p>חציית ים סוף בתוך שולחן אמנות: קירות מים מוארים, דרך במדבר ושיירה שנמשכת אל תוך האופק.</p></div></article><article className="kidsHero"><img src="https://alderlight.com/img/image3_shoebox-theatre-ideas_space-odyssey.jpg"/><div className="fshade"></div><div className="fcopy"><span>INFINITY KIDS · COMING SOON</span><h3>הדמיון שלהם.<br/>העולם שלהם.</h3><p>עולמות צבעוניים לחדרי ילדים עם אותה אשליית עומק, אבל שפה שמיועדת להם.</p></div></article></div><div className="kidsGrid">{kids.map((k,i)=><article className={"kid kid"+i} key={k[0]}><span>COMING SOON</span><h3>{k[0]}</h3><p>{k[1]}</p></article>)}</div></section>
-<section id="how" className="how"><div className="shell"><div className="sectionTitle"><div><div className="ey">BEHIND THE ILLUSION</div><h2>נראה בלתי אפשרי.<br/>בנוי בעולם האמיתי.</h2></div></div><div className="steps"><div><b>01</b><h3>דיאורמה פיזית</h3><p>אובייקטים וחומרים אמיתיים בתוך הרהיט.</p></div><div><b>02</b><h3>Infinity Optics</h3><p>שכבות אופטיות יוצרות המשכיות ועומק דרמטי.</p></div><div><b>03</b><h3>אור כחלק מהסיפור</h3><p>התאורה מעצבת את העולם ולא רק מקשטת אותו.</p></div><div><b>04</b><h3>שליטה חכמה</h3><p>מצבי תאורה ושליטה פשוטה ונוחה.</p></div></div></div></section>
-<section id="reserve" className="reserve shell"><div><div className="ey">EARLY ACCESS</div><h2>העולם הראשון שלכם<br/>מתחיל כאן.</h2><p>שריון מוקדם ב־₪200. בחרו דגם, בחרו World, וקבלו עדכון ראשון כשהייצור נפתח.</p><a className="gold" href="mailto:hello@infinityworlds.co">שריינו מקום בקולקציית ההשקה</a></div></section>
-<footer className="shell"><div className="brand"><b>∞</b><span>INFINITY WORLDS<small>MORE THAN A TABLE</small></span></div><span>CONCEPT COLLECTION · 2026</span></footer>
+<header className="topbar">
+  <div className="logo"><b>∞</b><span>Infinity Tables<small>MORE THAN A TABLE</small></span></div>
+  <nav><a href="#collection">דגמים</a><a href="#worlds">עולמות עיצוב</a><a href="#custom">התאמה אישית</a><a href="#exodus">The Exodus</a><a href="#kids">Kids</a></nav>
+  <a className="topcta" href="#reserve">הזמנה מוקדמת</a>
+</header>
+
+<section className="hero">
+  <img src="/assets/hero-real.jpg" alt="Infinity Living"/>
+  <div className="heroShade"></div>
+  <div className="heroCopy">
+    <h1>לא עוד שולחן.<br/><em>עולם אחר בבית שלך.</em></h1>
+    <p>רהיטים שמשלבים טכנולוגיה, עיצוב ואמנות ליצירת חוויה ויזואלית מרהיבה. כל שולחן הוא חלון לעולם אחר.</p>
+    <div className="heroBtns"><a href="#collection">גלה את הדגמים</a><a className="ghost" href="#worlds">עולמות העיצוב</a></div>
+    <div className="proof"><span>◇<b>עיצוב פרימיום</b></span><span>⚙<b>תאורת LED מתקדמת</b></span><span>▣<b>אספקה עד 90 יום</b></span><span>♢<b>אחריות מלאה</b></span></div>
+  </div>
+</section>
+
+<section id="collection" className="collection">
+  <article><img src="/assets/side-real.jpg"/><div><h2>Infinity Side</h2><p>שולחן צד / קפה קטן</p><small>Ø50-60 ס״מ</small><b>החל מ- ₪1,790</b></div></article>
+  <article><img src="/assets/living-real.jpg"/><div><h2>Infinity Living</h2><p>שולחן סלון מרשים</p><small>100×60 ס״מ</small><b>החל מ- ₪3,490</b></div></article>
+  <article><img src="/assets/dining-real.jpg"/><div><h2>Infinity Dining</h2><p>שולחן אוכל יוקרתי</p><small>180-220×90-100 ס״מ</small><b>החל מ- ₪7,900</b></div></article>
+</section>
+
+<section className="sourceSection" id="worlds">
+  <div className="sectionHead"><span>THE APPROVED LOOK</span><h2>זה האתר שסגרנו עליו.</h2><p>אותה שפה יוקרתית, אותן תמונות ואותו מבנה שהיו במוקאפים שאישרנו.</p></div>
+  <img src="/assets/approved-home-board.png" alt="Approved Infinity Tables luxury website"/>
+</section>
+
+<section className="sourceSection dark">
+  <div className="sectionHead"><span>MODELS + WORLDS</span><h2>שלושת הדגמים ועולמות העיצוב</h2></div>
+  <img src="/assets/approved-products-board.png" alt="Infinity Tables product and worlds board"/>
+</section>
+
+<section className="sourceSection lightBoard" id="custom">
+  <div className="sectionHead"><span>CONFIGURATOR</span><h2>התאמה אישית, חומרים ומפרט</h2></div>
+  <img src="/assets/approved-config-board.png" alt="Infinity Tables configurator"/>
+</section>
+
+<section id="exodus" className="exodus">
+  <img src="/assets/exodus-real.jpg" alt="The Exodus infinity table"/>
+  <div className="exodusShade"></div>
+  <div className="exodusCopy"><span>ART COLLECTION · COMING SOON</span><h2>THE EXODUS</h2><p>קריעת ים סוף בתוך שולחן אמנות: קירות מים מוארים ושיירה שנמשכת אל תוך האופק.</p></div>
+</section>
+
+<section id="kids" className="kids">
+  <div className="kidsCopy"><span>INFINITY KIDS · COMING SOON</span><h2>הדמיון שלהם.<br/>העולם שלהם.</h2><p>קטגוריה נפרדת של עולמות לילדים, עם אותה איכות בנייה ואותה אשליית עומק.</p></div>
+  <div className="kidGrid"><article><b>Dino World</b><small>ג׳ונגל ודינוזאורים</small></article><article><b>Space Mission</b><small>חלל, כוכבים וחללית</small></article><article><b>Hero City</b><small>עיר וגיבור מקורי</small></article><article><b>Racing World</b><small>מסלול מואר לעומק</small></article></div>
+</section>
+
+<section id="reserve" className="reserve"><span>EARLY ACCESS</span><h2>מוכנים לפתוח עולם אחר בבית?</h2><p>שריון מוקדם לקולקציית ההשקה.</p><a href="mailto:hello@infinityworlds.co">הצטרפות להשקה המוקדמת</a></section>
 </main>}
